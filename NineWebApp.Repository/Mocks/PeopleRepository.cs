@@ -1,7 +1,6 @@
 ﻿using NineWebApp.Contracts;
-using System;
+using System.Linq;
 using System.Collections.Generic;
-using System.Text;
 using static NineWebApp.Contracts.Enums;
 
 namespace NineWebApp.Repository.Mocks
@@ -13,9 +12,18 @@ namespace NineWebApp.Repository.Mocks
             return PeopleStub.InitPeople();
         }
 
-        public List<Person> GetPeople(Race race)
+        public List<Person> GetPeople(string race)
         {
-            throw new NotImplementedException();
+            var list = PeopleStub.InitPeople();
+
+            var raceList = PeopleStub.InitPeople().Where(person => person.Race == race.ToLowerInvariant()).ToList();
+            var raceAgeList = PeopleStub.InitPeople().Where(person => person.Race == race.ToLowerInvariant()
+                                                        && person.Age % 2 == 0);
+
+
+            return PeopleStub.InitPeople().Where(person => person.Race == race.ToLowerInvariant()
+                                                        && person.Age % 2 == 0)
+                                          .OrderBy(person => person.Age).ToList();
         }
     }
 }

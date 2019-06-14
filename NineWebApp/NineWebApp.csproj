@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NineWebApp.Contracts\NineWebApp.Contracts.csproj" />
     <ProjectReference Include="..\NineWebApp.Repository\NineWebApp.Repository.csproj" />
+    <ProjectReference Include="..\NineWebApp.Services\NineWebApp.Services.csproj" />
   </ItemGroup>
 
 </Project>

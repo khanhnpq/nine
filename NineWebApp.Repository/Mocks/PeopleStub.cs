@@ -7,19 +7,20 @@ namespace NineWebApp.Repository.Mocks
 {
     public static class PeopleStub
     {
-        //public static List<Person> InitPeople()
-        //{
-        //    List<Person> people = new List<Person>();
-        //    Random rnd = new Random();
-        //    for (int i = 0; i < 10; i++)
-        //    {
-        //        people.Add(new Person()
-        //        {
-        //            Name = "Person #" + i.ToString(), Age = rnd.Next(1, 99)
-        //        });
-        //    }
-        //    return people;
-        //}
+        public static List<Person> InitPeople1()
+        {
+            List<Person> people = new List<Person>();
+            Random rnd = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                people.Add(new Person()
+                {
+                    Name = "Person #" + i.ToString(),
+                    Age = rnd.Next(1, 99)
+                });
+            }
+            return people;
+        }
 
         public static List<Person> InitPeople()
         {

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NineWebApp.Repository;
+using NineWebApp.Services;
 
 namespace NineWebApp
 {
@@ -28,6 +29,7 @@ namespace NineWebApp
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IPeopleRepository, Repository.Mocks.PeopleRepository>();
+            services.AddScoped<IPeopleService, PeopleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +45,18 @@ namespace NineWebApp
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            // app.UseMvc();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "Home",
+                    template: "{controller=Home}/{action=Index}/{race?}");
+
+                routes.MapRoute(
+                    name: "Race",
+                    template: "{controller=Home}/{action=Race}/{race?}");
+            });
         }
     }
 }

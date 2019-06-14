@@ -7,6 +7,6 @@ namespace NineWebApp.Repository
     public interface IPeopleRepository
     {
         List<Person> GetPeople();
-        List<Person> GetPeople(Race race);
+        List<Person> GetPeople(string race);
     }
 }

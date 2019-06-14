@@ -1,4 +1,6 @@
-﻿namespace NineWebApp.Contracts
+﻿using Newtonsoft.Json;
+
+namespace NineWebApp.Contracts
 {
     public class Person
     {
@@ -6,6 +8,10 @@
         public string Name { get; set; }
         public int Age { get; set; }
 
+        //[JsonIgnore]
+        public virtual string Race { get; set; }
+
+        
         public virtual double Height
         {
             get
@@ -37,11 +43,21 @@
                 height = value;
             }
         }
+
+        //[JsonIgnore]
+        public override string Race
+        {
+            get { return Enums.Race.Angle.ToString().ToLowerInvariant(); }
+        }
     }
 
     public class Saxon : Angle
     {
-
+        //[JsonIgnore]
+        public override string Race
+        {
+            get { return Enums.Race.Saxon.ToString().ToLowerInvariant(); }
+        }
     }
 
     public class Jute : Person
@@ -57,6 +73,12 @@
                 height = value;
             }
         }
+
+        //[JsonIgnore]
+        public override string Race
+        {
+            get { return Enums.Race.Jute.ToString().ToLowerInvariant(); }
+        }
     }
 
     public class Hawaiian : Person
@@ -71,6 +93,12 @@
             {
                 height = value;
             }
+        }
+
+        //[JsonIgnore]
+        public override string Race
+        {
+            get { return Enums.Race.Hawaiian.ToString().ToLowerInvariant(); }
         }
     }
 }

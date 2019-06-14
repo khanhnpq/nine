@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<NineWebApp.Contracts.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<script>
+ function SelectionChanged()
+ {
+     var e = document.getElementById("race");
+     var selected = e.options[e.selectedIndex].value;
+     var url = '@Html.Raw(Url.Action("Race", "Home"))';
+     window.location = url + "/" + selected;
+ }
+</script>
+
+<h2>Index</h2>
+
+@Html.DropDownList("Race",
+                    new SelectList(Enum.GetValues(typeof(NineWebApp.Contracts.Enums.Race))),
+                    "Select a race",
+                    new { @class = "form-control" ,
+                        id = "race",
+                        onchange = "SelectionChanged()"
+                    })
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
