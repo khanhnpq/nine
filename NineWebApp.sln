@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Repository", "Ni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Services", "NineWebApp.Services\NineWebApp.Services.csproj", "{80E87D7B-C81F-4A68-AB97-74DACE3A31E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Test", "NineWebApp.Test\NineWebApp.Test.csproj", "{F7D184C9-2450-492F-9D6A-A2CF5529BCB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{80E87D7B-C81F-4A68-AB97-74DACE3A31E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E87D7B-C81F-4A68-AB97-74DACE3A31E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E87D7B-C81F-4A68-AB97-74DACE3A31E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D184C9-2450-492F-9D6A-A2CF5529BCB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D184C9-2450-492F-9D6A-A2CF5529BCB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D184C9-2450-492F-9D6A-A2CF5529BCB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D184C9-2450-492F-9D6A-A2CF5529BCB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

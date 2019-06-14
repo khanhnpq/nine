@@ -9,7 +9,13 @@
  {
      var e = document.getElementById("race");
      var selected = e.options[e.selectedIndex].value;
-     window.location = selected;
+     if (selected == "Select a race") {
+         window.location = "home";
+     }
+     else {
+         window.location = selected;
+     }
+    
  }
 </script>
 

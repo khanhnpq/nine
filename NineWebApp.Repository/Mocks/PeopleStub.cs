@@ -7,22 +7,65 @@ namespace NineWebApp.Repository.Mocks
 {
     public static class PeopleStub
     {
-        public static List<Person> InitPeople1()
+        
+
+        public static List<Person> InitPeople()
         {
             List<Person> people = new List<Person>();
-            Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
+            Random ageRandom = new Random();
+            Random raceRandom = new Random();
+            
+            for (int i = 1; i <= 10000; i++)
             {
-                people.Add(new Person()
+                var race = (Enums.Race)raceRandom.Next(1, 4);
+
+                if(race is Enums.Race.Angle)
                 {
-                    Name = "Person #" + i.ToString(),
-                    Age = rnd.Next(1, 99)
-                });
+                    people.Add(new Angle()
+                    {
+                        Name = $@"Person #{i} is {Enums.Race.Angle.ToString()}",
+                        Age = ageRandom.Next(1, 99)
+                    });
+                }
+
+                if (race is Enums.Race.Saxon)
+                {
+                    people.Add(new Saxon()
+                    {
+                        Name = $@"Person #{i} is {Enums.Race.Saxon.ToString()}",
+                        Age = ageRandom.Next(1, 99)
+                    });
+                }
+
+                if (race is Enums.Race.Jute)
+                {
+                    people.Add(new Jute()
+                    {
+                        Name = $@"Person #{i} is {Enums.Race.Jute.ToString()}",
+                        Age = ageRandom.Next(1, 99)
+                    });
+                }
+
+                if (race is Enums.Race.Hawaiian)
+                {
+                    people.Add(new Jute()
+                    {
+                        Name = $@"Person #{i} is {Enums.Race.Hawaiian.ToString()}",
+                        Age = ageRandom.Next(1, 99)
+                    });
+                }
+
+                //people.Add(new Person()
+                //{
+                //    Name = "Person #" + i.ToString(),
+                //    Age = ageRandom.Next(1, 99)
+                    
+                //});
             }
             return people;
         }
 
-        public static List<Person> InitPeople()
+        public static List<Person> InitPeople1()
         {
             List<Person> people = new List<Person>();
 

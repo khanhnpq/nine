@@ -5,11 +5,17 @@ namespace NineWebApp.Contracts
     public class Person
     {
         protected double height;
+       // protected string race;
+
         public string Name { get; set; }
         public int Age { get; set; }
 
         //[JsonIgnore]
-        public virtual string Race { get; set; }
+        public virtual string Race
+        {
+            get { return Enums.Race.Unknown.ToString().ToLowerInvariant(); }
+           // set { race = value; }
+        }
 
         
         public virtual double Height

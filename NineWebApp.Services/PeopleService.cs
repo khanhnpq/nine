@@ -33,6 +33,23 @@ namespace NineWebApp.Services
             };
         }
 
-        
+        public List<Person> AddAge(List<Person> peopleList, int numberOfYear)
+        {
+            for (int i = 0; i < peopleList.Count; i++)
+            {
+                var person = peopleList[i];
+                person.Age = person.Age + numberOfYear;
+                peopleList[i] = person;
+            }
+            return peopleList;
+
+        }
+
+        public List<Person> FilterByFace(List<Person> peopleList, string race)
+        {
+            return peopleList.Where(person => person.Race == race.ToLowerInvariant()
+                                                        && person.Age % 2 == 0)
+                                          .OrderBy(person => person.Age).ToList();
+        }
     }
 }
