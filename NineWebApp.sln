@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp", "NineWebApp\NineWebApp.csproj", "{86097E60-64D1-497E-BFE4-34F2609D91A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Contracts", "NineWebApp.Contracts\NineWebApp.Contracts.csproj", "{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86097E60-64D1-497E-BFE4-34F2609D91A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86097E60-64D1-497E-BFE4-34F2609D91A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86097E60-64D1-497E-BFE4-34F2609D91A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86097E60-64D1-497E-BFE4-34F2609D91A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
