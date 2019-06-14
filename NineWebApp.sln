@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp", "NineWebApp\Ni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Contracts", "NineWebApp.Contracts\NineWebApp.Contracts.csproj", "{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineWebApp.Repository", "NineWebApp.Repository\NineWebApp.Repository.csproj", "{4DBE1185-00C0-47D0-B410-F11BDA4BCF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB70347-DE3B-444A-BB5C-61E33F09DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBE1185-00C0-47D0-B410-F11BDA4BCF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBE1185-00C0-47D0-B410-F11BDA4BCF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBE1185-00C0-47D0-B410-F11BDA4BCF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBE1185-00C0-47D0-B410-F11BDA4BCF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
