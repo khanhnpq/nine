@@ -17,7 +17,7 @@ namespace NineWebApp.Repository.Mocks
             
             for (int i = 1; i <= 10000; i++)
             {
-                var race = (Enums.Race)raceRandom.Next(1, 4);
+                var race = (Enums.Race)raceRandom.Next(1, 5);
 
                 if(race is Enums.Race.Angle)
                 {
